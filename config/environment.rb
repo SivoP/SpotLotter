@@ -7,7 +7,7 @@ require 'HTTParty'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
-
+require 'net/http'
 require 'pry'
 
 
