@@ -18,6 +18,7 @@ GEM
     backports (3.6.5)
     bond (0.5.1)
     builder (3.2.2)
+    byebug (6.0.2)
     coderay (1.1.0)
     httparty (0.13.5)
       json (~> 1.8)
@@ -80,6 +81,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  byebug
   httparty
   pry
   puma

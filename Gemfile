@@ -8,7 +8,7 @@ gem 'activesupport'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
-
+gem 'byebug'
 gem 'puma'
 gem 'tux'
 
