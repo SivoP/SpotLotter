@@ -11,11 +11,11 @@ get '/login' do
 end
 
 get '/hello' do
-  
-
-  HTTParty.post("https://accounts.spotify.com/api/token/?grant_type=authorization_code&#code=#{params[:code]}&redirect_uri=http%3A%2F%2Flocalhost%3A9393%2Fhello",{
-    header:
-    })
+  binding.pry
+ 
+  # HTTParty.post("https://accounts.spotify.com/api/token/?grant_type=authorization_code&#code=#{params[:code]}&redirect_uri=http%3A%2F%2Flocalhost%3A9393%2Fhello",{
+  #   header: 
+  #   })
   erb :index
 
 end
