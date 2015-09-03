@@ -34,7 +34,7 @@ get '/hello' do
     :headers => {
       "Authorization" => "Bearer #{access_token}"
       })
-  
+
    # @saved_tracks["items"][0]["track"]["name"])
    # @saved_tracks["items"][0]["track"]["artists"][0]["name"]
   erb :hello
