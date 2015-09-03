@@ -25,11 +25,13 @@ get '/hello' do
   }).to_hash
 
   access_token = response["access_token"]
-  get_user = HTTParty.get("https://api.spotify.com/v1/me",
+  current_user = HTTParty.get("https://api.spotify.com/v1/me",
     :headers => {
       "Authorization" => "Bearer #{access_token}"
       }).to_hash
-  
+
+  @current_username = current_user["display_name"] || current_user["id"]
+
   @saved_tracks = HTTParty.get("https://api.spotify.com/v1/me/tracks", 
     :headers => {
       "Authorization" => "Bearer #{access_token}"
@@ -40,6 +42,8 @@ get '/hello' do
   erb :hello
   # end
 end
+
+
 
 
 

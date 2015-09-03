@@ -1,23 +1,23 @@
 <!-- this app will be simple, it is meant to show you the most listened to tracks in your library -->
 <div class="container">
   <div class="row">
-    <span class="col s11 green accent-3">  <h3 class="center-align"> Logged In </h3></span>
+    <span class="col s11 green accent-3">  <h3 class="center-align"> Hello <%= @current_username %> </h3></span>
     <div id="login"></div>
   </div>
   <div class="row">
     <div class="col s3 card large green accent-3">
       <div id="mostPlayed">
         <h4 class="center-align">Most Played </h4>
-        <div class="divider"></div>
         <ul class="sample-song-list">
           <% @saved_tracks["items"].each do |item| %>
            <li>
-            <%= item["track"]["name"] %>       
+           <div class="divider"></div>
+            <%= item["track"]["name"] %>  
            </li> 
            <li> 
              <%= item["track"]["artists"][0]["name"] %> 
+             <div class="divider">
            </li>
-           <div class="divider"> </div> 
           <% end %>
         </ul>      
       </div>
