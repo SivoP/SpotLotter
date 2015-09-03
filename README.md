@@ -1,10 +1,41 @@
-Sinatra
-=============
+![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
+===========
 
-Brought to you by Lighthouse Labs
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Materialize, a CSS Framework based on material design
 
-## Getting Started
+### Current Version : v0.97.0
 
-1. `bundle install`
-2. `shotgun -p 3000 -o 0.0.0.0`
-3. Visit `http://localhost:3000/` in your browser
+## Sass Requirements:
+- Ruby Sass 3.3+, LibSass 0.6+
+
+## Supported Browsers:
+Chrome 35+, Firefox 31+, Safari 7+, IE 10+
+
+## Changelog
+- v0.96.1 (April 6, 2015)
+  - Dropdown Fixes
+  - Materialize functions fixed for Meteor
+- v0.96.0 (April 1, 2015)
+  - **Toasts, transitions, scrollfire added under Materialize namespace**
+  - **Dropdown is now created as a child of its parent**
+  - Collapsibles supports nesting
+  - Modal Bottom Sheet added
+  - Indeterminate Checkboxes added
+  - New Checkbox Style Added
+  - Text Inputs supports placeholder/readonly
+  - Google Inbox-like Collapsible added
+  - Text Character Counter added
+  - Waves no longer breaks on SVG's
+
+- v0.95.3 (Feb 25, 2015)
+  - Parallax image loading / responsiveness fixes
+  - Date picker supports month/year as dropdown
+  - Dismissable collection items
+  - Avatar collection items
+  - Pagination Added
+  - ScrollFire fixes
+
+
+## Contributing
+[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)

@@ -23,7 +23,17 @@ get '/hello' do
   :headers => {
     "Authorization" => "Basic #{client_id_and_secret}"
   }).to_hash
+  access_token = response["access_token"]
+  get_user = HTTParty.get("https://api.spotify.com/v1/me",
+    :headers => {
+      "Authorization" => "Bearer #{access_token}"
+      }).to_hash
+  binding.pry
+
+
   erb :hello
+
+
 end
 
 
