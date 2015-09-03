@@ -7,18 +7,24 @@
   <div class="row">
     <div class="col s3 card large green accent-3">
       <div id="mostPlayed">
-        <h4>Most Played </h4>
+        <h4 class="center-align">Most Played </h4>
         <div class="divider"></div>
         <ul class="sample-song-list">
           <% @saved_tracks["items"].each do |item| %>
-           <li> <%= item["track"]["artists"][0]["name"] %> </li>
+           <li>
+            <%= item["track"]["name"] %>       
+           </li> 
+           <li> 
+             <%= item["track"]["artists"][0]["name"] %> 
+           </li>
+           <div class="divider"> </div> 
           <% end %>
         </ul>      
       </div>
     </div>
-    <div class="col s3 card large green accent-3 offset-s1">
+    <div class="col s3 card large green accent-3 offset-s1 center-align">
       <div id="mostRecent">
-        <h4> Most Recent </h4>
+        <h4 class="center-align"> Most Recent </h4>
         <div class="divider"></div>
         <ul class="sample-song-list">
             <li>sample song</li>
@@ -30,9 +36,9 @@
           </ul>
       </div>
     </div>
-    <div class="col s3 card large offset-s1 green accent-3">
+    <div class="col s3 card large offset-s1 green accent-3 center-align">
       <div id="leastPlayed">
-        <h4>Least Played</h4>
+        <h4 class="center-align">Least Played</h4>
         <div class="divider"> </div>
         <ul class="sample-song-list">
           <li>sample song</li>

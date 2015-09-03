@@ -35,11 +35,9 @@ get '/hello' do
       "Authorization" => "Bearer #{access_token}"
       })
   
-  puts @saved_tracks["items"][0]["track"]["artists"][0]["name"]
+   # @saved_tracks["items"][0]["track"]["name"])
+   # @saved_tracks["items"][0]["track"]["artists"][0]["name"]
   erb :hello
-
-  # @saved_tracks["items"].each do |item| 
-  #   item["track"]["artists"][0]["name"]
   # end
 end
 
