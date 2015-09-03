@@ -10,12 +10,9 @@
         <h4>Most Played </h4>
         <div class="divider"></div>
         <ul class="sample-song-list">
-            <li>sample song</li>
-            <li>sample song</li>
-            <li>sample song</li>
-            <li>sample song</li>
-            <li>sample song</li>
-            <li>sample song</li>
+          <% @saved_tracks["items"].each do |item| %>
+           <li> <%= item["track"]["artists"][0]["name"] %> </li>
+          <% end %>
         </ul>      
       </div>
     </div>
