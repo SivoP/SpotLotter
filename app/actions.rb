@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/login' do
-  authUrl = "https://accounts.spotify.com/authorize/?client_id=#{ENV["CLIENT_ID"]}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A9393%2Fhello&scope=user-read-private%20user-read-email"
+  authUrl = "https://accounts.spotify.com/authorize/?client_id=#{ENV["CLIENT_ID"]}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A9393%2Fhello&scope=user-read-private%20user-read-email%20user-library-read"
   redirect authUrl 
 end
 
@@ -28,7 +28,13 @@ get '/hello' do
     :headers => {
       "Authorization" => "Bearer #{access_token}"
       }).to_hash
-  binding.pry
+  puts get_user
+
+  get_saved_tracks = HTTParty.get("https://api.spotify.com/v1/me/tracks", 
+    :headers => {
+      "Authorization" => "Bearer #{access_token}"
+      }).to_hash
+    puts pp(get_saved_tracks)
 
 
   erb :hello
