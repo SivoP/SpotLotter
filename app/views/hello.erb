@@ -1,28 +1,31 @@
 <!-- this app will be simple, it is meant to show you the most listened to tracks in your library -->
 <div class="container">
   <div class="row">
-    <span class="col s11 green accent-3">  <h3 class="center-align"> Hello <%= @current_username %> </h3></span>
+    <span id="songs-page-header" class="col s11 green accent-3">  <h3 class="center-align"> Hello <%= @current_username %> </h3></span>
     <div id="login"></div>
   </div>
   <div class="row">
-    <div class="col s3 card large green accent-3">
+    <div class="col s3 card large green accent-3 track-list">
       <div id="mostPlayed">
-        <h4 class="center-align">Most Played </h4>
+        <h4 class="center-align">Saved Tracks </h4>
         <ul class="sample-song-list">
-          <% @saved_tracks["items"].each do |item| %>
-           <li>
-           <div class="divider"></div>
-            <%= item["track"]["name"] %>  
-           </li> 
-           <li> 
-             <%= item["track"]["artists"][0]["name"] %> 
-             <div class="divider">
-           </li>
+          <% @saved_tracks && @saved_tracks["items"].each do |item| %>
+            <div class="divider"></div>
+            <div class="section">
+             <li>
+              <%= item["track"]["name"] %>  
+             </li> 
+             <li> 
+               <%= item["track"]["artists"][0]["name"] %> 
+               
+             </li>
+            </div>
+            <div class="divider"></div>
           <% end %>
         </ul>      
       </div>
     </div>
-    <div class="col s3 card large green accent-3 offset-s1 center-align">
+    <div class="col s3 card large green accent-3 offset-s1 center-align track-list">
       <div id="mostRecent">
         <h4 class="center-align"> Most Recent </h4>
         <div class="divider"></div>
@@ -36,7 +39,7 @@
           </ul>
       </div>
     </div>
-    <div class="col s3 card large offset-s1 green accent-3 center-align">
+    <div class="col s3 card large offset-s1 green accent-3 center-align track-list">
       <div id="leastPlayed">
         <h4 class="center-align">Least Played</h4>
         <div class="divider"> </div>

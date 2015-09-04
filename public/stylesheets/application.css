@@ -1,4 +1,26 @@
 body {
   color: white;
-
+  background-color: #212121;
 }
+
+
+
+div.col{
+  box-shadow: 0.45em 0.45em  #424242;
+  overflow-y: scroll;
+} 
+
+
+#index-background {
+  height: 100%;
+  width: 100%;
+}
+
+#songs-page-header {
+  box-shadow: 0em 0.35em 0.2em #424242;
+}
+
+#login-button {
+  background-color: #212121;
+}
+

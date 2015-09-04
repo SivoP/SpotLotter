@@ -31,17 +31,20 @@ get '/hello' do
       }).to_hash
 
   @current_username = current_user["display_name"] || current_user["id"]
-
   @saved_tracks = HTTParty.get("https://api.spotify.com/v1/me/tracks", 
     :headers => {
       "Authorization" => "Bearer #{access_token}"
       })
-
+  puts pp(@saved_tracks)
    # @saved_tracks["items"][0]["track"]["name"])
    # @saved_tracks["items"][0]["track"]["artists"][0]["name"]
   erb :hello
   # end
 end
+
+
+
+
 
 
 
